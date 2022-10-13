@@ -1,5 +1,9 @@
 package com.example.vplay
 
+import android.net.Uri
+import android.net.Uri.*
+import android.widget.VideoView
+import android.widget.MediaController
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -32,6 +36,9 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+        val uri: Uri = Uri.parse("android.resource://" + packageName + "/" + "test")
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
