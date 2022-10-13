@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         // specify location of media file
-        val uri: Uri = parse("android.resource://" + packageName + "/" + "test")
+        val uri: Uri = parse("android.resource://" + packageName + "/" + "raw/test")
 
         // setting media controller & URI, then starting the videoView
         videoView.setMediaController(mediaController)
