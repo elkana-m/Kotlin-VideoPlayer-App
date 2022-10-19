@@ -1,5 +1,6 @@
 package com.example.vplay
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,12 +25,14 @@ class SecondFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
     private lateinit var mediaController : MediaController
+    private lateinit var PACKAGENAME : Context
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        PACKAGENAME = context()
 
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
