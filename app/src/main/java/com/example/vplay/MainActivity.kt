@@ -1,9 +1,5 @@
 package com.example.vplay
 
-//import android.net.Uri
-//import android.net.Uri.*
-//import android.widget.VideoView
-//import android.widget.MediaController
 import android.os.Bundle
 import android.provider.MediaStore.Audio.Media
 import com.google.android.material.snackbar.Snackbar
@@ -20,7 +16,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-//    private lateinit var videoView: VideoView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,23 +25,13 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-//        videoView = findViewById(R.id.testView)
 
-//        val mediaController = MediaController(this)
-//        mediaController.setAnchorView(videoView)
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-//        // specify location of media file
-//        val uri: Uri = parse("android.resource://" + packageName + "/" + "raw/test")
 
-//        // setting media controller & URI, then starting the videoView
-//        videoView.setMediaController(mediaController)
-//        videoView.setVideoURI(uri)
-//        videoView.requestFocus()
-//        videoView.start()
 
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

@@ -25,14 +25,13 @@ class SecondFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
     private lateinit var mediaController : MediaController
-    private lateinit var PACKAGENAME : Context
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        PACKAGENAME = context()
+
 
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
@@ -46,22 +45,13 @@ class SecondFragment : Fragment() {
 
         mediaController = MediaController(requireContext())
         mediaController.setAnchorView(videoView)
-//        videoView = findViewById(R.id.testView)
-//        mediaController = MediaController(this)
-//        mediaController.setAnchorView(videoView)
-
 
 
         // specify location of media file
-//        val uri: Uri = parse("android.resource://" + packageName + "/" + "raw/test")
-        val uri: Uri = parse("android.resource://" + MainActivity().packageName + "/" + "raw/test")
+        val uri: Uri = parse("android.resource://" + activity?.packageName + "/" + "raw/test")
 
 
         // setting media controller & URI, then starting the videoView
-//        videoView.setMediaController(mediaController)
-//        videoView.setVideoURI(uri)
-//        videoView.requestFocus()
-//        videoView.start()
         videoView.setMediaController(mediaController)
         videoView.setVideoURI(uri)
         videoView.requestFocus()
