@@ -7,6 +7,6 @@
     <string name="open">Open</string>
     <string name="back">Back</string>
 
-    <string name="grand_ole_opry">Enjoy a video from the Grand Ole Opry</string>
+    <string name="video">video snapshot with name goes here.</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
