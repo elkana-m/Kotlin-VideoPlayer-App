@@ -1,5 +1,6 @@
 package com.example.vplay
 
+import android.graphics.Bitmap.Config
 import android.os.Bundle
 import android.provider.MediaStore.Audio.Media
 import com.google.android.material.snackbar.Snackbar
@@ -10,6 +11,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.core.content.ContextCompat
 import com.example.vplay.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -33,10 +35,10 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+//        binding.fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show()
+//        }
 
 
     }
@@ -62,4 +64,6 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
+
+
 }
