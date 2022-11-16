@@ -9,8 +9,10 @@ import androidx.navigation.fragment.findNavController
 import com.example.vplay.databinding.FragmentSecondBinding
 import android.net.Uri
 import android.net.Uri.*
+import android.widget.LinearLayout
 import android.widget.VideoView
 import android.widget.MediaController
+import androidx.recyclerview.widget.LinearLayoutManager
 
 
 /**
@@ -31,7 +33,6 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
 
@@ -39,7 +40,6 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         videoView = requireView().findViewById(R.id.testView)
 
         mediaController = MediaController(requireContext())
@@ -60,6 +60,8 @@ class SecondFragment : Fragment() {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
